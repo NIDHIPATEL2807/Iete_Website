@@ -5,6 +5,7 @@ import NotFound from "../Pages/NotFound";
 import OurTeam from "../Pages/OurTeam";
 import Events from "../Pages/Events";
 import MainLayout from "../Layouts/MainLayout";
+import EventPage from "../Pages/EventPage";
 
 
 const AppRoutes = () => {
@@ -16,7 +17,9 @@ const AppRoutes = () => {
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/team" element={<OurTeam />} />
                 <Route path="/events" element={<Events />} >
+
                 </Route>
+                <Route path="/events/:eventId" element={<EventPage />} />
             </Route>
             {/* fallback route */}
                 <Route path="*" element={<NotFound />} />
