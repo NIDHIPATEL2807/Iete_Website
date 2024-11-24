@@ -13,7 +13,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-900 text-white py-12 shadow-lg">
+    <footer className="bg-gray-900  text-white py-12 shadow-lg ">
       <div className="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Contact Section */}
         <div data-aos="fade-up" className="flex flex-col justify-center">

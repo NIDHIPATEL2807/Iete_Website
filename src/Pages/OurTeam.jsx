@@ -1,8 +1,17 @@
+
+
 import React from 'react'
+import Scroll from '@/Components/Scroll'
+import TeamCard from '@/Components/TeamCard'
+import TeamMembers from '@/Components/TeamMembers'
 
 const OurTeam = () => {
   return (
-    <div>OurTeam</div>
+    <div>
+      <Scroll/>
+      {/* <TeamCard/> */}
+      <TeamMembers/>
+    </div>
   )
 }
 

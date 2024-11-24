@@ -4,6 +4,10 @@ module.exports = {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+		fontSize: {
+			'9xl': '8rem',   // You can adjust this value as needed
+			'10xl': '10rem', // Larger size if you need it
+		  },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -62,6 +66,17 @@ module.exports = {
   			}
   		},
   		keyframes: {
+			// marquee: {
+			// 	to: {
+			// 	  transform: 'translateX(-100%)',
+			// 	},
+			//   },
+			
+			floatUp: {
+				'0%, 100%': { transform: 'translateZ(0)', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' },
+				'50%': { transform: 'translateY(-10px)', boxShadow: '0 8px 12px rgba(0, 0, 0, 0.2)' },
+			  },
+	  
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -77,11 +92,15 @@ module.exports = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+			  
+
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+			  float: 'floatUp 0.3s ease-in-out',
+			//marquee: 'marquee 16s linear infinite', 
   		}
   	}
   },
