@@ -83,7 +83,15 @@ module.exports = {
   				},
   				to: {
   					height: 'var(--radix-accordion-content-height)'
-  				}
+  				},
+				  slideInLeft: {
+					"0%": { transform: "translateX(-100%)", opacity: 0 },
+					"100%": { transform: "translateX(0)", opacity: 1 },
+				  },
+				  slideInRight: {
+					"0%": { transform: "translateX(100%)", opacity: 0 },
+					"100%": { transform: "translateX(0)", opacity: 1 },
+				  },
   			},
   			'accordion-up': {
   				from: {
@@ -98,9 +106,7 @@ module.exports = {
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out',
-			  float: 'floatUp 0.3s ease-in-out',
-			//marquee: 'marquee 16s linear infinite', 
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },
