@@ -1,5 +1,9 @@
 import EventOverview from "@/Components/EventOverview";
+import AnimatedFAQ from "@/Components/FAQs";
 import HeroSection from "@/Components/HeroText";
+import PrizeDisplay from "@/Components/PrizeDisplay";
+import ImageCarousel from "@/Components/SpecialEventImages";
+import MagicalTimeline from "@/Components/Timeline";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -20,7 +24,7 @@ const eventData = [
   },
   { 
     id: "2", 
-    title: "Hackathon", 
+    title: "BugBuster 2023", 
     description: "A coding challenge to innovate new ideas.",
     heroImage: "https://via.placeholder.com/1920x1080", // Replace with actual image URL
     images : ["https://via.placeholder.com/600x400","https://via.placeholder.com/600x400","https://via.placeholder.com/600x400","https://via.placeholder.com/600x400"],
@@ -32,6 +36,20 @@ const eventData = [
       "Collaborate with like-minded peers",
       "Prizes for top-performing teams",
     ],
+    timeline:[
+      { description: "Event 1: Kickoff Meeting" },
+      { description: "Event 2: Design Phase" },
+      { description: "Event 3: Development Starts" },
+      { description: "Event 4: Testing Phase" },
+      { description: "Event 5: Product Launch" },
+    ],
+    prizesData : {
+      firstPlace: '₹1,50,000',
+      secondPlace: '₹1,00,000',
+      thirdPlace: '₹50,000',
+    }
+    
+  
   },
   { 
     id: "3", 
@@ -82,14 +100,26 @@ const EventPage = () => {
     </div>
   </div>
     Event Details Section */}
-   <HeroSection text="BUGBUSTERS 2023" />
+   <HeroSection text={event.title} />
     {/* <div className="container mx-auto px-6 lg:px-16 py-12">
     <h1 className="text-4xl font-bold mb-6">{event.title}</h1>
     <p className="text-xl mb-6">{event.description}</p>
 
   </div> */}
   {/* Event Summary Section */}
-  <EventOverview eventImages={event.images} />
+  {/* <EventOverview eventImages={event.images} /> */}
+  
+  <ImageCarousel images={event.images} />
+  
+  <div className="container mx-auto px-6 lg:px-16 py-12">
+    <MagicalTimeline/>
+    </div>
+    <div className="container mx-auto px-6 lg:px-16 py-12">
+      <PrizeDisplay prizes={event.prizesData} />
+    </div>
+    <div className="container mx-auto px-6 lg:px-16 py-12">
+      <AnimatedFAQ />
+    </div>
     </div>
   );
 };
