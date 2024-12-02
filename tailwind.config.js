@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+		fontFamily: {
+			pricedown: ['"Pricedown"', ...defaultTheme.fontFamily.sans],
+		  },
 		fontSize: {
 			'9xl': '8rem',   // You can adjust this value as needed
 			'10xl': '10rem', // Larger size if you need it

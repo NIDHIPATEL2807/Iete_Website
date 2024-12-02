@@ -1,8 +1,10 @@
 import EventOverview from "@/Components/EventOverview";
 import AnimatedFAQ from "@/Components/FAQs";
-import HeroSection from "@/Components/HeroText";
+import HeroText from "@/Components/HeroText";
+import MarqueeBackground from "@/Components/MarqueBackground";
 import PrizeDisplay from "@/Components/PrizeDisplay";
 import ImageCarousel from "@/Components/SpecialEventImages";
+import MapComp from "@/Components/Timeline";
 import MagicalTimeline from "@/Components/Timeline";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -24,7 +26,8 @@ const eventData = [
   },
   { 
     id: "2", 
-    title: "BugBuster 2023", 
+    title: "BugBuster 2024",
+    tagline : "We Got Bugbuster Before GTA 6", 
     description: "A coding challenge to innovate new ideas.",
     heroImage: "https://via.placeholder.com/1920x1080", // Replace with actual image URL
     images : ["https://via.placeholder.com/600x400","https://via.placeholder.com/600x400","https://via.placeholder.com/600x400","https://via.placeholder.com/600x400"],
@@ -119,20 +122,29 @@ const EventPage = () => {
   if (!event) {
     return <div>Event not found!</div>;
   }
+  const events = [
+    { location: [51.505, -0.09], description: 'Event 1' },
+    { location: [51.515, -0.1], description: 'Event 2' },
+    { location: [51.525, -0.12], description: 'Event 3' }
+  ];
 
   return (
     <div className="container mx-auto px-6 lg:px-16 py-12">
-   <HeroSection title={event.title}
-    location="TBA"
-    contact="9785640610"
-    description="Andholika is a talent hunt for the most versatile singer among the participants. The event is split into two categories, Eastern and Western. The event consists of an audition round and a final round. 4 finalists will be selected from each category. A winner and runner up will be awarded from each category."
+      <div className="relative h-screen">
+        <MarqueeBackground/>
+   <HeroText title={event.title}
+    
+    contact={event.tagline}
+    description="Bugbuster is a talent hunt for the most versatile singer among the participants. The event is split into two categories, Eastern and Western. The event consists of an audition round and a final round. 4 finalists will be selected from each category. A winner and runner up will be awarded from each category."
 
    />
+   </div>
 
   <ImageCarousel images={event.images} />
   
   <div className="container mx-auto px-6 lg:px-16 py-12">
-    <MagicalTimeline/>
+  <h1 className="text-center text-2xl font-bold mb-5">Event Map</h1>
+     <MapComp events={events}  />
     </div>
     <div className="container mx-auto px-6 lg:px-16 py-12">
       <PrizeDisplay prizes={event.prizesData} />

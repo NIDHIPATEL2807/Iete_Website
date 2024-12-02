@@ -23,7 +23,7 @@ const FAQCard = ({ question, answer, potionColor, index, showDollarSign }) => {
           onClick={() => setIsOpen(!isOpen)}
           className="w-full flex items-center justify-between text-white py-2"
         >
-          <span className="text-sm md:text-base font-medium text-left pr-4">
+          <span className="text-md md:text-base font-medium text-left pr-4">
             {question}
           </span>
           <motion.div
@@ -31,7 +31,10 @@ const FAQCard = ({ question, answer, potionColor, index, showDollarSign }) => {
             transition={{ duration: 0.2 }}
           >
             <div className='
-            w-4 h-4 flex-shrink-0
+             
+            text-green-600
+            text-6xl
+            font-pricedown
             '>
             $
             </div>
@@ -86,7 +89,7 @@ const AnimatedFAQ = ({ faqs }) => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: isVisible ? 1 : 0, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
+        className="text-4xl md:text-5xl font-bold text-white text-center mb-12 font-pricedown"
       >
         FAQs
       </motion.h1>

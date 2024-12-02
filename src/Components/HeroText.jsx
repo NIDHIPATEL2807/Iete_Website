@@ -1,54 +1,56 @@
 import React from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const HeroText = ({ title, contact, location, description }) => {
   return (
-    <div className="relative w-full min-h-screen bg-black text-white font-sans overflow-hidden">
-      {/* Background Moving Text */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute whitespace-nowrap text-[12rem] lg:text-[16rem] font-extrabold text-gray-800 opacity-10 animate-marquee">
-          MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 px-6 py-8 flex flex-col items-center justify-center min-h-screen text-center md:px-12">
-        {/* Back Button */}
-        <div className="absolute top-8 left-8">
-          <button className="text-3xl text-gray-300 hover:text-white transition duration-200">
-            ←
-          </button>
-        </div>
-
-        {/* Title */}
-        <h1 className="text-6xl lg:text-8xl font-bold mb-8">{title}</h1>
-
-        {/* Location */}
-        <p className="text-lg lg:text-2xl text-gray-400 mb-4 flex items-center gap-2">
-          📍 <span>{location}</span>
-        </p>
-
-        {/* Contact */}
-        <p className="text-lg lg:text-xl text-yellow-500 mb-12">
-          Contact: {contact}
-        </p>
-
-        {/* Description */}
-        <p className="max-w-3xl text-gray-300 text-sm lg:text-base leading-relaxed">
-          {description}
-        </p>
-
-        {/* Navigation Arrows */}
-        <div className="flex gap-6 mt-12">
-          <button className="w-14 h-14 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-2xl transition">
-            ←
-          </button>
-          <button className="w-14 h-14 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-2xl transition">
-            →
-          </button>
-        </div>
-      </div>
+    <div className="h-screen mt-28 ">
+    <div className="  relative text-white flex flex-col md:flex-row items-center md:items-start">
+    <div className="md:w-1/2 h-[70vh] text-center md:text-left mt-16 md:mt-0 flex flex-col ">  
+    <div className=" ">
+    <FaArrowLeft
+    className="text-5xl  text-bold"
+    />
     </div>
-  );
+   
+    <div>
+        <h1 className="mt-10 text-8xl font-bold font-pricedown">{title}</h1>
+        <div className="flex items-center justify-center md:justify-start mt-4">
+            <i className="fas fa-map-marker-alt text-xl"></i>
+            <span className="ml-2 pt-5 text-xl font-pricedown">{location}</span>
+        </div>
+        <p className="mt-5 text-xl "> {contact}</p>
+        </div>
+        <div className="mt-20 flex gap-10 space-x-4">
+    <button className="w-24 h-24 rounded-full border-2 border-yellow-500 flex items-center justify-center">
+    {/* need to increase the size of icon */}
+    <FaArrowLeft className=" 
+    text-5xl
+    text-yellow-500
+    " />
+
+    </button>
+    <button className="w-24 h-24 rounded-full border-2 border-yellow-500 flex items-center justify-center">
+    <FaArrowRight
+    className="text-5xl text-yellow-500"
+    />
+    </button>
+</div>
+    </div>
+    <div className="md:w-1/2 h-[70vh] flex flex-col items-center mt-8 md:mt-0">
+        <div className=" bg-black flex items-center justify-center">
+            <img src="https://placehold.co/600x250" alt="Event logo" className=""/>
+        </div>
+        <div className="mt-16 px-4 z-10 text-center md:text-left">
+            <p className="text-lg  font-bold">
+              {description}
+            </p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+);
 };
 
 export default HeroText;
