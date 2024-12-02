@@ -2,7 +2,8 @@
 import EventCarousel from '@/Components/EventCarausel';
 import EventCard from '@/Components/EventCard';
 import React from 'react';
-
+import bugbuster from '../assets/bugbuster1.jpg';
+import bugbuster2 from '../assets/bugbuster2.jpg';
 const Events = () => {
   const latestEvents = [
     {
@@ -10,14 +11,25 @@ const Events = () => {
       title: "Udaan 2024",
       date: "August 10, 2024",
       description: "A magical evening of fun and chilling to welcome students!",
-      image: "https://via.placeholder.com/600x300",
+      image: bugbuster,
+      tags: [
+        "24-hour coding marathon",
+        "Collaborate with like-minded peers",
+        "Prizes for top-performing teams",
+      ],
     },
     {
       id: 2,
       title: "Bug Buster 2023",
       date: "February 15, 2023",
       description: "One of its kind hackathon only for hardware enthusiasts",
-      image: "https://via.placeholder.com/600x300",
+      image: bugbuster2,
+      tags: [
+        "24-hour coding marathon",
+        "Collaborate with like-minded peers",
+        "Prizes for top-performing teams",
+      ],
+      
     },
   ];
 
@@ -55,6 +67,7 @@ const Events = () => {
               date={event.date}
               description={event.description}
               image={event.image}
+              tags={event.tags}
             />
           ))}
         </div>

@@ -31,7 +31,7 @@ const eventData = [
 
     subtitle: "Code. Create. Compete.",
     summary: "Showcase your coding skills in this thrilling hackathon and win amazing prizes.",
-    keyPoints: [
+    tags: [
       "24-hour coding marathon",
       "Collaborate with like-minded peers",
       "Prizes for top-performing teams",
@@ -47,7 +47,39 @@ const eventData = [
       firstPlace: '₹1,50,000',
       secondPlace: '₹1,00,000',
       thirdPlace: '₹50,000',
-    }
+    },
+     faqs : [
+      {
+        question: "When will the problem statements for the hackathon be released?",
+        answer: "Problem statements will be released at the start of the hackathon. Make sure to follow our communication channels for updates.",
+        potionColor: "from-orange-500/50 to-red-500/50"
+      },
+      {
+        question: "Do projects need to be submitted on a platform or shown at presentation time?",
+        answer: "Projects will need to be submitted through our designated platform and presented during the demo session.",
+        potionColor: "from-blue-500/50 to-purple-500/50"
+      },
+      {
+        question: "Will my team be allowed to call upon mentors as we please?",
+        answer: "Yes, mentors will be available during specified hours to help guide teams with their projects.",
+        potionColor: "from-pink-500/50 to-red-500/50"
+      },
+      {
+        question: "What if I've never been in a Hackathon before?",
+        answer: "No prior experience is required! We welcome participants of all skill levels and provide resources to help you get started.",
+        potionColor: "from-yellow-500/50 to-orange-500/50"
+      },
+      {
+        question: "Which technology should I use?",
+        answer: "You're free to use any technology stack that best suits your project's needs. Choose what you're most comfortable with.",
+        potionColor: "from-green-500/50 to-emerald-500/50"
+      },
+      {
+        question: "What is theme of this year's problem statements?",
+        answer: "The theme will be revealed during the opening ceremony. Stay tuned for the announcement!",
+        potionColor: "from-blue-500/50 to-cyan-500/50"
+      }
+    ]
     
   
   },
@@ -90,25 +122,13 @@ const EventPage = () => {
 
   return (
     <div className="container mx-auto px-6 lg:px-16 py-12">
-  {/* <div
-    className="w-full h-screen bg-cover bg-center flex items-center justify-center"
-    style={{ backgroundImage: `url('${event.heroImage}')` }}
-  >
-    <div className="bg-black bg-opacity-50 text-white text-center p-8 rounded">
-      <h1 className="text-5xl font-bold mb-4">{event.title}</h1>
-      <p className="text-2xl">{event.subtitle}</p>
-    </div>
-  </div>
-    Event Details Section */}
-   <HeroSection text={event.title} />
-    {/* <div className="container mx-auto px-6 lg:px-16 py-12">
-    <h1 className="text-4xl font-bold mb-6">{event.title}</h1>
-    <p className="text-xl mb-6">{event.description}</p>
+   <HeroSection title={event.title}
+    location="TBA"
+    contact="9785640610"
+    description="Andholika is a talent hunt for the most versatile singer among the participants. The event is split into two categories, Eastern and Western. The event consists of an audition round and a final round. 4 finalists will be selected from each category. A winner and runner up will be awarded from each category."
 
-  </div> */}
-  {/* Event Summary Section */}
-  {/* <EventOverview eventImages={event.images} /> */}
-  
+   />
+
   <ImageCarousel images={event.images} />
   
   <div className="container mx-auto px-6 lg:px-16 py-12">
@@ -118,7 +138,7 @@ const EventPage = () => {
       <PrizeDisplay prizes={event.prizesData} />
     </div>
     <div className="container mx-auto px-6 lg:px-16 py-12">
-      <AnimatedFAQ />
+      <AnimatedFAQ faqs={ event.faqs} />
     </div>
     </div>
   );

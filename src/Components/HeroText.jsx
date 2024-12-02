@@ -1,75 +1,54 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { FaArrowDown } from 'react-icons/fa';
 
-const HeroSection = ({ eventName }) => {
+const HeroText = ({ title, contact, location, description }) => {
   return (
-    <div className="relative h-[80vh] flex flex-col items-center justify-center  overflow-hidden">
-      {/* Animated Glitch Background */}
-      <motion.div
-        className="absolute inset-0 bg-black opacity-30"
-        animate={{ opacity: [0.1, 0.3, 0.1] }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-      />
-      
-      {/* Main Title with Glitch Animation */}
-      <motion.h1
-        className="text-6xl md:text-8xl text-white font-extrabold text-center relative"
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <span className="glitch-text">
-          {eventName} <span className="text-yellow-400"> BugBusters 2023</span>
-        </span>
-      </motion.h1>
+    <div className="relative w-full min-h-screen bg-black text-white font-sans overflow-hidden">
+      {/* Background Moving Text */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute whitespace-nowrap text-[12rem] lg:text-[16rem] font-extrabold text-gray-800 opacity-10 animate-marquee">
+          MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC
+        </div>
+      </div>
 
-      {/* Subtitle with a little glitch */}
-      <motion.p
-        className="text-lg md:text-2xl text-white mt-4 text-center relative"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        Join us to debug the biggest tech challenges!
-      </motion.p>
+      {/* Content */}
+      <div className="relative z-10 px-6 py-8 flex flex-col items-center justify-center min-h-screen text-center md:px-12">
+        {/* Back Button */}
+        <div className="absolute top-8 left-8">
+          <button className="text-3xl text-gray-300 hover:text-white transition duration-200">
+            ←
+          </button>
+        </div>
 
-      {/* Call to Action Button */}
-      <motion.a
-        href="#register"
-        className="mt-8 px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition duration-300"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-      >
-        {/* Register Now */}
-      </motion.a>
+        {/* Title */}
+        <h1 className="text-6xl lg:text-8xl font-bold mb-8">{title}</h1>
 
-      {/* Scroll Down Button */}
-      <motion.div
-        className="absolute bottom-10 flex items-center justify-center animate-bounce"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
-      >
-        <FaArrowDown className="text-white text-4xl" />
-      </motion.div>
+        {/* Location */}
+        <p className="text-lg lg:text-2xl text-gray-400 mb-4 flex items-center gap-2">
+          📍 <span>{location}</span>
+        </p>
 
-      {/* Glitching Bug Animation */}
-      <motion.div
-        className="absolute top-1/4 right-40 w-24 h-24 bg-yellow-500 rounded-full animate-pulse"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-40 left-40 w-20 h-20 bg-red-500 rounded-full animate-bounce"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-      />
+        {/* Contact */}
+        <p className="text-lg lg:text-xl text-yellow-500 mb-12">
+          Contact: {contact}
+        </p>
+
+        {/* Description */}
+        <p className="max-w-3xl text-gray-300 text-sm lg:text-base leading-relaxed">
+          {description}
+        </p>
+
+        {/* Navigation Arrows */}
+        <div className="flex gap-6 mt-12">
+          <button className="w-14 h-14 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-2xl transition">
+            ←
+          </button>
+          <button className="w-14 h-14 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-2xl transition">
+            →
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default HeroSection;
+export default HeroText;
