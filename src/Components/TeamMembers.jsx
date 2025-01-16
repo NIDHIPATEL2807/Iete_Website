@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa'; // Import social media icons
-import AtharvaImg from '../assets/Atharva.jpg';
+
 
 const TeamCard = ({ name, position, image, instagram, linkedin, index }) => {
   return (
@@ -30,7 +30,7 @@ const TeamCard = ({ name, position, image, instagram, linkedin, index }) => {
         }}
       >
         <img
-          src={AtharvaImg}
+          src={image}
           alt={name}
           className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:shadow-xl"
         />
@@ -88,22 +88,22 @@ const TeamCard = ({ name, position, image, instagram, linkedin, index }) => {
 
 const teamData = {
   facultyAdvisor: {
-    name: 'Dr. John Doe',
+    name: 'Prof.Mansish Parmar',
     position: 'Faculty Advisor',
     image: '/assets/faculty.jpg', // Update the path to your image
     instagram: 'https://www.instagram.com/johndoe',
     linkedin: 'https://www.linkedin.com/in/johndoe/',
   },
   coreTeam: [
-    { name: 'Member 1', position: 'Position 1', image: '/assets/member1.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 2', position: 'Position 2', image: '/assets/member2.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 3', position: 'Position 3', image: '/assets/member3.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 4', position: 'Position 4', image: '/assets/member4.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 5', position: 'Position 5', image: '/assets/member5.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 6', position: 'Position 6', image: '/assets/member6.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 7', position: 'Position 7', image: '/assets/member7.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 8', position: 'Position 8', image: '/assets/member8.jpg', instagram: '#', linkedin: '#' },
-    { name: 'Member 9', position: 'Position 9', image: '/assets/member9.jpg', instagram: '#', linkedin: '#' },
+    { name: 'Woodrow Gonsalves', position: 'Chairperson', image: 'src/assets/woodrow.JPG', instagram: '#', linkedin: '#' },
+    { name: 'Asmiya Sayyad', position: 'Vice Chairperson', image: 'src/assets/vcp.JPG', instagram: '#', linkedin: '#' },
+    { name: 'Smit Gawade', position: 'Finance Head', image: 'src/assets/smit.JPG', instagram: '#', linkedin: '#' },
+    { name: 'Achintya Chavan', position: 'Executive core', image: 'src/assets/Achintya.JPG', instagram: '#', linkedin: '#' },
+    { name: 'Atharva Chavan', position: 'Executive core', image: 'src/assets/Atharva.jpg', instagram: '#', linkedin: '#' },
+    { name: 'Soham Ganatra', position: 'Executive core', image: 'src/assets/soham.png', instagram: '#', linkedin: '#' },
+    { name: 'Vedant Bhavsar', position: 'Executive core', image: 'src/assets/vedant.JPG', instagram: '#', linkedin: '#' },
+    { name: 'Saiesh Vandkar', position: 'Executive core', image: 'src/assets/sahish.JPG', instagram: '#', linkedin: '#' },
+    { name: 'Harsh Pandey', position: 'Executive core', image: 'src/assets/pandey.JPG', instagram: '#', linkedin: '#' },
   ],
 };
 

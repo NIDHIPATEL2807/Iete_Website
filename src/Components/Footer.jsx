@@ -54,7 +54,7 @@ const Footer = () => {
   <FaInstagram className="h-10 w-10 relative text-pink-500 bg-gray-900 rounded-full p-2" />
 </a>
 <a
-  href="https://www.linkedin.com/company/iete-spit/"
+  href="https://www.linkedin.com/company/spit-iete/"
   target="_blank"
   rel="noopener noreferrer"
   className="relative group transition-transform transform hover:scale-110"

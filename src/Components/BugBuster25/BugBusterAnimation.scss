@@ -1,0 +1,227 @@
+// .bugbuster-animation {
+//   position: relative;
+//   min-height: 100vh;
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+// .bugbuster-animation .bg {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28359/marvel.jpg") no-repeat center center / cover;
+//   animation: fadeBackground 6s ease-in-out infinite; /* Infinite looping */
+//   z-index: -1;
+// }
+
+// /* Black overlay */
+// .bugbuster-animation .bg::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+//   z-index: 1; /* Make sure overlay is above the background */
+// }
+
+// .bugbuster-animation .buttons {
+//   position: absolute;
+//   top: 90%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   z-index: 1;
+
+//   .button {
+//     margin: 0 10px;
+//     padding: 10px 20px;
+//     background-color: #d30215;
+//     color: white;
+//     font-size: 1.2em;
+//     cursor: pointer;
+//     border-radius: 5px;
+//     text-transform: uppercase;
+//   }
+// }
+
+// .bugbuster-animation .pane {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   perspective: 700px;
+// }
+
+// .bugbuster-animation .rotate {
+//   position: relative;
+//   animation: rotateText 6s ease-in-out forwards;
+// }
+
+// .bugbuster-animation .logo {
+//   font-size: 10em;
+//   font-weight: bold;
+//   letter-spacing: -0.03em;
+//   color: white;
+//   border:1px;
+//   border-color:black ;
+//   transform: translate(-50%, -50%) rotate3d(1, -1, 0, 40deg) scale(2);
+//   transform-style: preserve-3d;
+//   animation: rotateText 6s ease-in-out forwards;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%) rotate3d(1, -1, 0, 40deg) scale(2);
+// }
+
+// // Keyframes for background animation
+// @keyframes moveBackground {
+//   0% {
+//     background-position: 0 0;
+//     opacity: 1;
+//   }
+//   50% {
+//     background-position: 100% 100%;
+//     opacity: 0.6;
+//   }
+//   100% {
+//     background-position: -100% -100%;
+//     opacity: 0;
+//   }
+// }
+
+// // Keyframes for rotating text
+// @keyframes rotateText {
+//   0% {
+//     transform: translate(-50%, -50%) rotate3d(1, -1, 0, 40deg) scale(2);
+//   }
+//   50% {
+//     transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg) scale(1.1);
+//   }
+//   100% {
+//     transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg) scale(1);
+//   }
+// }
+.bugbuster-animation {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.bugbuster-animation .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28359/marvel.jpg") no-repeat center center / cover;
+  animation: fadeBackground 6s ease-in-out infinite; /* Infinite looping */
+  z-index: -1;
+
+  background-image: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), 
+  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28359/marvel.jpg");
+}
+
+/* Black overlay */
+.bugbuster-animation .bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: 1; /* Make sure overlay is above the background */
+}
+
+.bugbuster-animation .buttons {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  .button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #d30215;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+}
+
+.bugbuster-animation .pane {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 700px;
+}
+
+.bugbuster-animation .rotate {
+  position: relative;
+  animation: rotateText 6s ease-in-out forwards;
+}
+
+.bugbuster-animation .logo {
+  font-size: 10em;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  color: white;
+  border-bottom: 3px solid rgb(255, 254, 254);
+  border-top: 3px solid rgb(255, 254, 254);
+  padding: 0rem;
+  text-transform: uppercase;
+  letter-spacing: -.2rem;
+  margin: .05rem .05rem .5rem;
+  z-index: 10;
+  transform: rotate3d(1, -1, 0, 40deg) scale(2);
+  transform-style: preserve-3d;
+  animation: rotateText 6s ease-in-out forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate3d(1, -1, 0, 40deg) scale(2);
+
+  
+  
+}
+
+// Keyframes for background animation
+// @keyframes moveBackground {
+//   0% {
+//     background-position: 0 0;
+//     opacity: 1;
+//   }
+//   50% {
+//     background-position: 100% 100%;
+//     opacity: 0.6;
+//   }
+//   100% {
+//     background-position: -100% -100%;
+//     opacity: 0;
+//   }
+//}
+
+// Keyframes for rotating text
+@keyframes rotateText {
+  0% {
+    transform: translate(-50%, -50%) rotate3d(1, -1, 0, 40deg) scale(2);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate3d(0, 0, 0, 0deg) scale(1);
+  }
+}

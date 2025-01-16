@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";9
 
 const EventOverview = ({ eventImages }) => {
   const containerRef = useRef(null); // Reference for the container

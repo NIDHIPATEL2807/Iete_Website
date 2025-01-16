@@ -1,0 +1,17 @@
+.timeline-container {
+    position: relative;
+    width: 100%;
+    height: 2000px; /* Adjust as per the number of phases */
+  }
+  
+  .timeline-line {
+    position: absolute;
+    width: 2px;
+    background-color: #ccc;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  
+  

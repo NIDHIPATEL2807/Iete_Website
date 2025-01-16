@@ -9,6 +9,19 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes sure padding and borders don't affect width/height */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
 
 @layer base {

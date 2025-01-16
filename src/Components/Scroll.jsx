@@ -48,3 +48,59 @@ style.textContent = `
 document.head.appendChild(style);
 
 export default Scroll;
+
+// import React from "react";
+
+
+// const AnimatedText = () => {
+//   return (
+//     <div style={styles.body}>
+//       <p style={styles.p}>
+//         MEET OUR TEAM
+//         <span style={styles.span}>IETE 2024-25</span>
+//       </p>
+//     </div>
+//   );
+// };
+
+// const styles = {
+//   body: {
+//     font: "500 2em/1.5 'Neuton'",
+//     background: "#090d00",
+//     color: "rgba(255,255,255,.25)",
+//     textAlign: "center",
+//     margin: "0",
+//     height: "100vh", // To ensure full-page height
+//     overflow: "hidden",
+//   },
+//   p: {
+//     textTransform: "uppercase",
+//     letterSpacing: ".5em",
+//     display: "inline-block",
+//     border: "4px double rgba(255,255,255,.25)",
+//     padding: "1.5em 0em",
+//     position: "absolute",
+//     top: "18%",
+//     left: "50%",
+//     width: "40em",
+//     margin: "0 0 0 -20em",
+//   },
+//   span: {
+//     font: "700 4em/1 'Oswald', sans-serif",
+//     letterSpacing: "0",
+//     padding: ".25em 0 .325em",
+//     display: "block",
+//     margin: "0 auto",
+//     textShadow: "0 0 80px rgba(255,255,255,.5)",
+//     background: "url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y",
+//     WebkitBackgroundClip: "text",
+//     backgroundClip: "text",
+//     WebkitTextFillColor: "transparent",
+//     WebkitAnimation: "aitf 80s linear infinite",
+//     WebkitTransform: "translate3d(0,0,0)",
+//     WebkitBackfaceVisibility: "hidden",
+//   },
+// };
+
+// // Keyframes are not supported in inline styles, so use CSS for animations
+// export default AnimatedText;
